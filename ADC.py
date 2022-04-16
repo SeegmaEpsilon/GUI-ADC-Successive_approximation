@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ADC.ui'
+# Form implementation generated from reading ui file 'C:\Users\stepa\PycharmProjects\SAR_ADC\ADC.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -15,12 +15,13 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 460)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(800, 460))
+        MainWindow.setMaximumSize(QtCore.QSize(800, 600))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -42,7 +43,7 @@ class Ui_MainWindow(object):
         self.bit_depth.setGeometry(QtCore.QRect(730, 30, 51, 22))
         self.bit_depth.setReadOnly(False)
         self.bit_depth.setMinimum(1)
-        self.bit_depth.setMaximum(24)
+        self.bit_depth.setMaximum(12)
         self.bit_depth.setProperty("value", 6)
         self.bit_depth.setObjectName("bit_depth")
         self.line_input = QtWidgets.QLineEdit(self.centralwidget)
@@ -98,9 +99,6 @@ class Ui_MainWindow(object):
         self.label_6.setFont(font)
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit.setGeometry(QtCore.QRect(30, 30, 461, 361))
-        self.plainTextEdit.setObjectName("plainTextEdit")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(680, 350, 101, 41))
         self.pushButton_2.setObjectName("pushButton_2")
@@ -122,6 +120,9 @@ class Ui_MainWindow(object):
         self.line_output.setAlignment(QtCore.Qt.AlignCenter)
         self.line_output.setReadOnly(True)
         self.line_output.setObjectName("line_output")
+        self.graphWidget = QtWidgets.QWidget(self.centralwidget)
+        self.graphWidget.setGeometry(QtCore.QRect(30, 30, 460, 360))
+        self.graphWidget.setObjectName("graphWidget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
